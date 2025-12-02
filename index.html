@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyRise Connecting Platform Proposal | Mindden</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Mindden <span>/ SkyRise</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#reto">Challenge</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#fase0">Phase 0</a></li>
+                    <li><a href="#mvp">MVP</a></li>
+                    <li><a href="#arquitectura">Stack</a></li>
+                    <li><a href="#nfrs">NFRs</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#trazabilidad">Backlog</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#hosting">Costs</a></li>
+                    <li><a href="#gobierno">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="intro" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white;">
+        <div class="container">
+            <div style="text-align: center; padding-bottom: 40px;">
+                <span class="badge">Proposal Defense</span>
+                <h1 style="font-size: 3rem; margin: 24px 0 16px 0; color: white;">SkyRise Connecting Platform</h1>
+                <p style="font-size: 1.15rem; color: var(--accent); font-weight: 600; margin-bottom: 16px;">
+                    Multi-tenant SaaS Solution &bull; Multi-role and Multi-journey Platform
+                </p>
+                <p style="font-size: 1.25rem; color: #cbd5e1; max-width: 800px; margin: 0 auto;">
+                    B2B digital ecosystem for the integral management of the helicopter leasing lifecycle, unifying Owners, Operators, and internal team in a single environment.
+                </p>
+                <p style="font-size: 0.9rem; margin-top: 15px; color: #94a3b8;">
+                    Based on: RFP “SkyRise Connecting Platform – Phase 0 MVP and Prototype” & Document “Initial Requirements and Process Description”.
+                </p>
+            </div>
+
+            <div class="grid-2" style="margin-top: 40px; text-align: left;">
+                <div style="background: rgba(255,255,255,0.05); padding: 24px; border-radius: 8px;">
+                    <h3 style="color: white; margin-top:0;">What SkyRise Aims to Achieve</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li>Unify fragmented operations into a scalable platform.</li>
+                        <li>Automate manual processes (compliance, pricing).</li>
+                        <li>Improve the experience for Owners and Operators.</li>
+                        <li>Obtain real-time data visibility.</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 24px; border-radius: 8px;">
+                    <h3 style="color: white; margin-top:0;">What Mindden Contributes</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li>Consultative approach to mitigate risks in Phase 0.</li>
+                        <li>Robust and agnostic Cloud-Native architecture.</li>
+                        <li>Experience in complex B2B platforms.</li>
+                        <li>Commitment to security and scalability NFRs from day one.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reto">
+        <div class="container">
+            <h2>2. Understanding the Challenge and Actors</h2>
+            <p>SkyRise needs to orchestrate the relationship between multiple actors in a high-value and regulated market.</p>
+            
+            <div class="grid-4" style="margin-top: 30px;">
+                <div class="card highlight">
+                    <h4>Owner</h4>
+                    <p style="font-size: 0.9rem;">Asset owners. Need visibility into the status and profitability of their helicopters.</p>
+                </div>
+                <div class="card highlight">
+                    <h4>Operator</h4>
+                    <p style="font-size: 0.9rem;">Companies that operate the aircraft. Need agility in quotations and ease of compliance.</p>
+                </div>
+                <div class="card highlight">
+                    <h4>Company User</h4>
+                    <p style="font-size: 0.9rem;">SkyRise operational staff who manage the day-to-day of contracts.</p>
+                </div>
+                <div class="card highlight">
+                    <h4>Support / Compliance / Admin</h4>
+                    <p style="font-size: 0.9rem;">Cross-functional roles for technical support, regulatory validation, and system administration.</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 40px;">
+                <strong>Scope of Journeys J1-J5:</strong>
+                <ol style="margin-top: 10px; margin-bottom: 0;">
+                    <li><strong>J1:</strong> Onboarding & Pricing</li>
+                    <li><strong>J2:</strong> Search & Quote</li>
+                    <li><strong>J3:</strong> Lease Management</li>
+                    <li><strong>J4:</strong> Compliance & Reporting</li>
+                    <li><strong>J5:</strong> Exit & Remarketing</li>
+                </ol>
+            </div>
+            
+            <div class="warning-box" style="margin-top: 40px;">
+                <h3>Current Pain Points and Challenges</h3>
+                <ul style="margin-bottom: 0;">
+                    <li>Company and asset onboarding is manual and fragmented.</li>
+                    <li>There is a lack of a single, traceable view of the lease lifecycle.</li>
+                    <li>Difficulty in consolidating operational and maintenance reports.</li>
+                    <li>Overload in generating auditable compliance reports.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision">
+        <div class="container">
+            <h2>3. Platform Vision</h2>
+            <p>The objective is to build the operating system for the leasing business, structured in clear functional modules.</p>
+            <p>The platform replaces manual processes and spreadsheets with <strong>guided and traceable workflows</strong>, reducing errors and increasing operational efficiency.</p>
+            
+            <div class="grid-2" style="margin-bottom: 40px;">
+                <div class="card" style="border-left: 4px solid var(--success);">
+                    <h3>Business Value</h3>
+                    <ul style="margin-bottom: 0;">
+                        <li>Accelerate business growth through efficiency.</li>
+                        <li>Ensure risk control and regulatory compliance.</li>
+                        <li>Market differentiation through a superior digital experience.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>Technological Value</h3>
+                    <ul style="margin-bottom: 0;">
+                        <li>Cloud-Native, scalable, and integrable architecture.</li>
+                        <li>Secure platform with high observability (logging, metrics, tracing).</li>
+                        <li>Easily governable and maintainable long-term.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box" style="background-color: #f0f9ff; border-left: 4px solid var(--primary); margin-bottom: 40px;">
+                <h3 style="margin-top: 0; font-size: 1.3rem;">Dashboards and KPIs per Role</h3>
+                <p>The platform will offer personalized, real-time visibility, powered by the central data model:</p>
+                <div class="grid-3" style="margin-top: 15px;">
+                    <div>
+                        <strong>Management</strong>
+                        <p style="font-size: 0.9rem;">Aggregated view of the lease portfolio, financial profitability, risk exposure, and global business KPIs.</p>
+                    </div>
+                    <div>
+                        <strong>Operations</strong>
+                        <p style="font-size: 0.9rem;">Status of active contracts, compliance alerts, pending validation tasks, and technical incidents.</p>
+                    </div>
+                    <div>
+                        <strong>Owners & Operators</strong>
+                        <p style="font-size: 0.9rem;">Visibility of their assigned assets, quotation status, monthly reports, and contractual documentation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 30px;">
+                <div class="card">
+                    <h4>Company and Asset Onboarding</h4>
+                    <p>Digital workflows for entity registration, KYC, and detailed helicopter inventory setup.</p>
+                </div>
+                <div class="card">
+                    <h4>Search and Quotation</h4>
+                    <p>Advanced search engine and tools to generate fast and accurate quotations.</p>
+                </div>
+                <div class="card">
+                    <h4>Lease Management</h4>
+                    <p>Complete contract lifecycle: signing, payment tracking, statuses, and alerts.</p>
+                </div>
+                <div class="card">
+                    <h4>Compliance and Inspections</h4>
+                    <p>Management of maintenance reports, flight hours, and technical audits.</p>
+                </div>
+                <div class="card">
+                    <h4>Financial and Analytical Module</h4>
+                    <p>Integration with invoicing and Business Intelligence dashboards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fase0">
+        <div class="container">
+            <h2>4. Phase 0: Objectives and Deliverables (3 Months)</h2>
+            <p>Risk mitigation and detailed definition before massive construction.</p>
+            
+            <div style="margin-top: 20px; padding: 0 10px;">
+                <p><strong>Specific Objectives of Phase 0:</strong></p>
+                <ul>
+                    <li>Refine and jointly document the D1–D6 deliverables defined in the RFP.</li>
+                    <li>Align the business vision and the technical vision in a single, coherent framework.</li>
+                    <li>Produce a "tool-ready" backlog (Master Story List), ready for import into Jira/Azure Boards.</li>
+                    <li>Deliver a clickable UX prototype that reflects the key journeys J1–J5.</li>
+                    <li>Finalize a Tech & Integration Pack with architecture, NFRs, and integration plan.</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 32px;">
+                <div class="accordion-item">
+                    <button class="accordion-header">D1: Discovery Report</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Platform objectives, success metrics (KPIs), detailed initial functional scope, and out-of-scope elements. Identification of risks, critical dependencies, and business assumptions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">D2: Roadmap & Plan</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Short, medium, and long-term roadmap strategy. Definition of main milestones, dependency management, and exit criteria. Detailed reference plan for the execution of the MVP.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">D3: MVP Definition</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Final functional and technical scope of the MVP. Definition of success metrics per Journey. Release schedule and quality gates (Design Sign-off, Security Review, UAT).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">D4: Master Story List</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Complete breakdown into Epics and User Stories with Acceptance Criteria (AC). Effort estimations, story dependencies, definition of DoR/DoD, and required test types.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">D5: UX Low-Fi & Prototype</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Information Architecture (IA), User Flows, low-fidelity wireframes, and a clickable prototype iterated with at least 3 stakeholder feedback cycles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">D6: Tech & Integration Pack</button>
+                    <div class="accordion-content">
+                        <div>
+                            <p><strong>Content:</strong> Candidate architectures and documented final decision. Definition of NFRs (Security, Performance). Detailed integration plan (CRM, Invoicing, Pricing, AI, Notifications).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 40px;">
+                <h3>Results at the end of Phase 0</h3>
+                <ul style="margin-bottom: 0;">
+                    <li>Complete D1–D6 Pack, documented and agreed upon between SkyRise and Mindden.</li>
+                    <li>Clickable UX prototype that allows "seeing" the platform before building it.</li>
+                    <li>Backlog (Master Story List) ready for import into Jira, Azure Boards, or other tools.</li>
+                    <li>Clear view of risks, cost range, and detailed execution plan for the MVP.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="mvp">
+        <div class="container">
+            <h2>5. MVP Functional Scope (Journeys J1-J5)</h2>
+            <div class="grid-2">
+                <div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="card highlight" style="margin-bottom: 20px;">
+                            <h4>J1: Onboarding & Pricing</h4>
+                            <p>Owner/Operator registration with validation. Technical registration of helicopters. Integration with data providers for pricing suggestion.</p>
+                        </li>
+                        <li class="card highlight" style="margin-bottom: 20px;">
+                            <h4>J2: Search & Quote</h4>
+                            <p>Advanced search engine (technical/commercial filters). Helicopter detail page. Quotation request, offer issuance, and management of response SLAs.</p>
+                        </li>
+                        <li class="card highlight" style="margin-bottom: 20px;">
+                            <h4>J3: Lease Management</h4>
+                            <p>Contract creation from the winning offer. Management of lease statuses. Control of payments, maintenance reserves, and contractual modifications.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="card highlight" style="margin-bottom: 20px;">
+                            <h4>J4: Compliance & Reporting</h4>
+                            <p>Upload of monthly activity reports. Automatic data extraction (OCR) of hours and cycles. Discrepancy alerts and regulatory compliance.</p>
+                        </li>
+                        <li class="card highlight" style="margin-bottom: 20px;">
+                            <h4>J5: Exit & Remarketing</h4>
+                            <p>Lease closure workflow. Consolidation of technical and financial information. Automatic asset preparation for remarketing.</p>
+                        </li>
+                        <div class="info-box">
+                            <strong>MVP KPIs and Acceptance Criteria:</strong>
+                            <ul style="margin-bottom:0;">
+                                <li>Complete functional coverage of the 5 critical journeys.</li>
+                                <li>Adequate response times for critical operations.</li>
+                                <li>Performance aligned with the NFRs defined in D6.</li>
+                                <li>Sufficient AI precision level to support the operation, defined jointly with SkyRise.</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="arquitectura">
+        <div class="container">
+            <h2>6. Architecture and Technology Stack</h2>
+            <p>Modern design based on microservices, events, and cloud.</p>
+            
+            <table class="tech-table">
+                <tr>
+                    <th width="30%">Layer</th>
+                    <th>Technology / Strategy</th>
+                    <th>Detail and Justification</th>
+                </tr>
+                <tr>
+                    <td><strong>Content Delivery / CDN</strong></td>
+                    <td>CDN + Front Door del proveedor Cloud</td>
+                    <td>Global distribution of static content and latency optimization for the web experience.</td>
+                </tr>
+                <tr>
+                    <td><strong>Frontend Web</strong></td>
+                    <td>React + TypeScript + Next.js</td>
+                    <td>Hybrid rendering, robust typing, and modularity.</td>
+                </tr>
+                <tr>
+                    <td><strong>Frontend Mobile</strong></td>
+                    <td>React Native</td>
+                    <td>Shared code for field apps (inspections).</td>
+                </tr>
+                <tr>
+                    <td><strong>Backend Core</strong></td>
+                    <td>Java Spring Boot</td>
+                    <td>Robust business logic, enterprise standard.</td>
+                </tr>
+                <tr>
+                    <td><strong>Backend IA/ML</strong></td>
+                    <td>Microservicio IA específico</td>
+                    <td>Dedicated module for Pricing, OCR, and anomaly detection.</td>
+                </tr>
+                <tr>
+                    <td><strong>Databases</strong></td>
+                    <td>PostgreSQL + TimescaleDB + pgVector</td>
+                    <td>Relational (Core), Time Series (Telemetry), Vector (AI).</td>
+                </tr>
+                <tr>
+                    <td><strong>File Storage</strong></td>
+                    <td>Object Storage (S3 / Blob Storage)</td>
+                    <td>Secure repository for contracts, monthly reports, and operational attachments.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cache & Search</strong></td>
+                    <td>Redis & Elasticsearch</td>
+                    <td>High performance in sessions and complex searches (J2).</td>
+                </tr>
+                <tr>
+                    <td><strong>Asynchronous Integration</strong></td>
+                    <td>Colas / Bus de Eventos (Cloud nativo)</td>
+                    <td>Service decoupling and load peak management.</td>
+                </tr>
+                <tr>
+                    <td><strong>Infrastructure</strong></td>
+                    <td>Kubernetes (EKS/AKS) + Terraform</td>
+                    <td>Container orchestration and Infrastructure as Code (IaC).</td>
+                </tr>
+                <tr>
+                    <td><strong>CI/CD</strong></td>
+                    <td>Automated Pipelines</td>
+                    <td>Continuous deployment with automatic tests on every commit.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="nfrs">
+        <div class="container">
+            <h2>7. Security, NFRs, and Observability</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Security and Compliance</h3>
+                    <ul>
+                        <li><strong>Network and Perimeter:</strong> WAF, DDoS protection, VPC with public/private subnets.</li>
+                        <li><strong>Admin Access:</strong> Use of Bastion Host and/or VPN to access internal environments.</li>
+                        <li><strong>Identity (IAM):</strong> OIDC/OAuth2, mandatory MFA, granular RBAC per role.</li>
+                        <li><strong>Encryption:</strong> TLS 1.3 (Transit), disk/DB encryption (Rest), centralized Secret Management.</li>
+                        <li><strong>Data:</strong> Retention, anonymization, and deletion policies aligned with data protection requirements.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Observability and NFRs</h3>
+                    <ul>
+                        <li><strong>Key NFRs:</strong> Availability (Target SLA), Horizontal Scalability, Maintainability.</li>
+                        <li><strong>Performance:</strong> Performance aligned with the NFRs defined in D6.</li>
+                        <li><strong>Logging & Metrics:</strong> Centralized logging, Technical and business metrics.</li>
+                        <li><strong>Tracing:</strong> Distributed request tracing.</li>
+                        <li><strong>Operational Security:</strong> Integration with SIEM/SOC solutions.</li>
+                        <li><strong>Accessibility:</strong> Interface design following accessibility best practices (e.g., WCAG guidelines) to ensure inclusive use.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data">
+        <div class="container">
+            <h2>8. Data and Applied AI</h2>
+            
+            <div style="margin-bottom: 30px;">
+                <h3>Data Model</h3>
+                <p>The model is structured to support transactions, analysis, and regulatory compliance.</p>
+                <div class="grid-3">
+                    <div style="background: white; padding: 15px; border-radius: 4px; border: 1px solid var(--border);">
+                        <strong>Master Data</strong>
+                        <p style="font-size: 0.9rem; margin-bottom:0;">Entities (Owners/Operators), Assets (Helicopters), Users, Roles.</p>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 4px; border: 1px solid var(--border);">
+                        <strong>Transactional Data</strong>
+                        <p style="font-size: 0.9rem; margin-bottom:0;">Quotations, Contracts (Leases), Payments, Invoices.</p>
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 4px; border: 1px solid var(--border);">
+                        <strong>Operational/Maintenance Data</strong>
+                        <p style="font-size: 0.9rem; margin-bottom:0;">Maintenance Reports, Flight Hours, Telemetry (time series), Logs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>AI Use Cases</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>Intelligent Pricing</h4>
+                    <p>Algorithms that cross-reference external market data to suggest competitive leasing prices.</p>
+                </div>
+                <div class="card">
+                    <h4>Document OCR</h4>
+                    <p>Automated extraction of hours and cycles from PDF/image reports for J4.</p>
+                </div>
+                <div class="card">
+                    <h4>Anomaly Detection</h4>
+                    <p>Pattern analysis in TimescaleDB to detect financial or operational inconsistencies.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.95rem; background-color: #f1f5f9; padding: 15px; border-radius: 4px;">
+                <strong>pgVector</strong> and semantic search techniques will be used to locate relevant information in contractual documentation and logs, improving efficiency in complex queries and support.
+            </p>
+        </div>
+    </section>
+
+    <section id="trazabilidad">
+        <div class="container">
+            <h2>9. Backlog and Quality</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Traceability Matrix</h3>
+                    <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
+                        <strong>SkyRise RFP</strong> ↔ <strong>Requirements</strong> ↔ <strong>Epics</strong> ↔ <strong>Stories</strong> ↔ <strong>Tests</strong> ↔ <strong>D1-D6</strong>
+                    </div>
+                    <p style="margin-top: 20px;">We ensure that every line of code responds to a documented business need.</p>
+                </div>
+                <div>
+                    <h3>Testing Strategy (DoR / DoD)</h3>
+                    <ul>
+                        <li><strong>Test Types:</strong> Unit, API, UI, End-to-End, Security, Performance.</li>
+                        <li><strong>Definition of Ready (DoR):</strong> Clear Story, with ACs, estimated, and without blockers.</li>
+                        <li><strong>Definition of Done (DoD):</strong> Code reviewed, tests passed, documented, and deployed to QA.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 40px;">
+                <h3>Backlog Tool-Ready</h3>
+                <p style="margin-bottom: 0;">The result of deliverable D4 is a backlog structured by epics and stories, ready to be imported into project management tools like Jira or Azure Boards. It includes tagging by journey (J1-J5), release, work type, and priorities, serving as the direct bridge for MVP execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <div class="container">
+            <h2>10. Delivery Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 0: Month 1 (Weeks 1-2)</div>
+                    <h3>Kick-off and Discovery</h3>
+                    <p>Kick-off, Onboarding, Discovery Workshops. Start of D1 and D2.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 0: Month 1-2 (Weeks 3-6)</div>
+                    <h3>Definition and Prototyping</h3>
+                    <p>MVP Definition (D3), Master Story List (D4). UX Prototype v1 and v2. **Design Gate (Design Sign-off)**.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 0: Month 2-3 (Weeks 7-9)</div>
+                    <h3>Architecture and Refinement</h3>
+                    <p>Technical Pack (D6), final Prototype v3. **Security Gate (Security Review)**.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 0: Month 3 (Weeks 10-12)</div>
+                    <h3>Closure and MVP Planning</h3>
+                    <p>Formal closure of D1-D6. Detailed MVP construction plan. Environment preparation.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Subsequent Phases</div>
+                    <h3>MVP Construction & Go-Live</h3>
+                    <p>Iterative development. **UAT Gates (User Acceptance Testing)** for each Release. Soft Launch Deployment.</p>
+                    <p style="margin-top:8px;"><strong>Estimated Duration:</strong> 6–8 months of construction for the MVP, with progressive deployment.</p>
+                </div>
+            </div>
+            
+            <div class="info-box" style="border-left-color: var(--secondary);">
+                 <strong>Deployment Strategy and Environments:</strong>
+                 <p style="margin-bottom:0;">The platform will feature segregated environments for <strong>Development/Pre-production (dev/pre-prod)</strong> and <strong>Production (prod)</strong>, fully integrated into CI/CD pipelines to ensure reliable and auditable deliveries.</p>
+            </div>
+            
+            <div class="card" style="margin-top: 40px; border-left: 4px solid var(--secondary);">
+                <h3>Subsequent Phases – Post-MVP Evolution</h3>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Functional Extension:</strong> Development of new modules, advanced functionalities, and greater depth in analytics and reporting.</li>
+                    <li><strong>Business Expansion:</strong> Adaptation for new geographies and additional business units.</li>
+                    <li><strong>AI Reinforcement:</strong> Incorporation of new predictive models and greater process automation.</li>
+                    <li><strong>Continuous Optimization:</strong> Constant improvement of performance and Cloud infrastructure cost efficiency.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="hosting">
+        <div class="container">
+            <h2>11. Hosting Scenarios and Cost Scheme</h2>
+            
+            <div class="grid-2" style="margin-bottom: 40px;">
+                <div class="card">
+                    <h3 style="margin-top:0;">Cost Scheme</h3>
+                    <ul style="margin-top: 15px;">
+                        <li><strong>Phase 0 Cost:</strong> Fixed Price. Billing by milestones: 40% Start / 40% Intermediate Delivery / 20% Closure.</li>
+                        <li><strong>MVP Development Cost:</strong> Estimation based on Master Story List (T&M or Fixed Price depending on risk).</li>
+                        <li><strong>Hosting Cost (OpEx):</strong> Recurring monthly, as an order of magnitude and dependent on the chosen Cloud scenario.</li>
+                    </ul>
+                </div>
+                <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+                     <p>TCO will be optimized through the use of Reserved Instances and efficient auto-scaling, maintaining the Cloud-Native architecture.</p>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'aws')">AWS Scenario</button>
+                <button class="tab-btn" onclick="openTab(event, 'azure')">Azure Scenario</button>
+            </div>
+
+            <div id="aws" class="tab-content active">
+                <div class="card">
+                    <h3>Amazon Web Services (AWS)</h3>
+                    <ul>
+                        <li><strong>Compute:</strong> Amazon EKS (Managed Kubernetes).</li>
+                        <li><strong>Database:</strong> Amazon RDS for PostgreSQL. TimescaleDB self-managed or Cloud.</li>
+                        <li><strong>Storage:</strong> Amazon S3 (Standard + Infrequent Access).</li>
+                        <li><strong>Advantage:</strong> Maturity in data and analytics services.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="azure" class="tab-content">
+                <div class="card">
+                    <h3>Microsoft Azure</h3>
+                    <ul>
+                        <li><strong>Compute:</strong> Azure Kubernetes Service (AKS).</li>
+                        <li><strong>Database:</strong> Azure Database for PostgreSQL (Flexible Server).</li>
+                        <li><strong>Storage:</strong> Azure Blob Storage.</li>
+                        <li><strong>Advantage:</strong> Native integration with the Microsoft corporate ecosystem.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gobierno">
+        <div class="container">
+            <h2>12. Team, Governance, and Risks</h2>
+            
+            <div class="grid-2">
+                <div>
+                    <h3>Phase 0 Team</h3>
+                    <ul>
+                        <li><strong>Delivery / Project Manager:</strong> Commitment and risk management.</li>
+                        <li><strong>Solution Architect:</strong> Technical definition and D6.</li>
+                        <li><strong>Business Analyst / Proxy PO:</strong> Functional definition D1, D3, D4.</li>
+                        <li><strong>UX/UI Designer:</strong> Prototyping D5.</li>
+                        <li><strong>Tech Leads (FE/BE):</strong> Support in estimation and feasibility.</li>
+                        <li><strong>DevOps / QA:</strong> CI/CD and Quality Strategy.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Project Governance Model</h3>
+                    <p>The project will be governed by a **SkyRise–Mindden Project Committee** responsible for scope, timeline, and risks.</p>
+                    <ul>
+                        <li><strong>Cadence:</strong> Regular follow-up meetings (weekly/bi-weekly).</li>
+                        <li><strong>Reviews:</strong> Bi-weekly progress reviews on D1–D6 deliverables and UX prototype.</li>
+                        <li><strong>Tools:</strong> Use of Jira/Azure Boards (Backlog), Confluence/SharePoint (Documentation), and Figma/Miro (UX Design).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid-2" style="margin-top: 30px;">
+                <div>
+                    <h3>Assumptions and Exclusions</h3>
+                    <ul style="border-left: 4px solid var(--accent); padding-left: 10px;">
+                        <li><strong>Assumptions:</strong> Active participation of SkyRise personnel for workshops. Access to documentation and sample data. Basic hosting infrastructure available.</li>
+                        <li><strong>Exclusions:</strong> Functional code development in Phase 0. Deployment to production (except for demo environments). Third-party licenses.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--danger);">Risk Matrix</h3>
+                    <ul style="border-left: 4px solid var(--warning); padding-left: 10px;">
+                        <li><strong>Stakeholder Availability:</strong> Risk of validation delays. <em>Mitigation: Pre-approved session calendar.</em></li>
+                        <li><strong>Legacy Data Quality:</strong> Complexity in migration. <em>Mitigation: Early analysis in D1.</em></li>
+                        <li><strong>External Dependencies:</strong> Third-party integrations (Pricing). <em>Mitigation: Early definition of interface contracts.</em></li>
+                        <li><strong>Scope/Priority Changes:</strong> MVP deviation. <em>Mitigation: Strict change control process and backlog management.</em></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; text-align: center;">
+                <div style="max-width: 600px; margin: 0 auto 30px auto; text-align: left; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+                    <h3 style="margin-top: 0; font-size: 1.25rem;">Next Steps</h3>
+                    <ul style="margin-bottom: 0;">
+                        <li>Approval of Phase 0 and the proposed framework.</li>
+                        <li>Joint planning of the Kick-off and the Phase 0 workshop calendar.</li>
+                        <li>Start of Phase 0 with the objective of getting the MVP ready for construction in 3 months.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--primary); color: #94a3b8; padding: 40px 0; text-align: center; margin-top: 60px;">
+        <div class="container">
+            <p>&copy; 2025 Mindden. Confidential Proposal for SkyRise.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    // Calculate max height based on content
+                    const innerDiv = content.querySelector('div');
+                    if (innerDiv) {
+                        content.style.maxHeight = innerDiv.offsetHeight + 40 + "px"; // + padding
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                }
+            });
+        });
+
+        // Tabs functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove('active');
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.className += " active";
+        }
+        
+        // Open the first tab content on load
+        window.onload = function() {
+            openTab({currentTarget: document.querySelector('.tabs .tab-btn')}, 'aws');
+        };
+    </script>
+</body>
+</html>
